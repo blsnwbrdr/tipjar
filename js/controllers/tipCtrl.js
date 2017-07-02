@@ -1,5 +1,5 @@
 app.controller('tipDataCtrl', function($scope, $http) {
-  $http.get('http://brandonsco.de/lab/tipguide/data/countryTipData.json').then(function(response) {
+  $http.get('http://brandonsco.de/portfolio/tipjar/data/countryTipData.json').then(function(response) {
     var countryName = [];
     for(var i = 0; i < response.data.length; i++) {
       countryName.push(response.data[i].country);
