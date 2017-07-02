@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">		
+	<title></title>
+<!--	<link href="https://fonts.googleapis.com/css?family=Merienda+One|Hind:300,400,500,600" rel="stylesheet">-->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+<!--  <link href="css/animate.css" rel="stylesheet">-->
+	<link href="css/style.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>	
+</head>
+<body id="body" class="animated fadeIn">
+  
+  <div id="banner">
+    <div id="overlay"></div>
+  </div>
+     
+  <div id="header">
+    <h1 id="h1">TIP JAR</h1>
+    <h3 id="h3">A globetrotting guide to gratuity</h3>
+    <i id="globe" class="fa fa-globe"></i>    
+    <button id="listBtn">Choose a location</button>
+  </div>
+  
+  <div id="main">
+    <div id="tipData" ng-app="tipApp">
+      <div ng-controller="tipDataCtrl">
+        <ul id="countryList" class="fadeIn">
+          <li ng-repeat="x in countryTipData">
+            <a href="#body">
+              <button type="button" class="country" ng-click="userSelection(x)">{{ x }}</button>
+            </a>
+          </li>
+        </ul>
+        <div id="countryTipData" class="animated fadeIn">
+          <h2>{{ country }}</h2>
+          <i class="fa fa-cutlery"></i>          
+          <h4 id="dining">Dining:</h4><p>{{ dining }}</p>
+          <i class="fa fa-taxi"></i>                    
+          <h4 id="transportation">Transportation:</h4><p>{{ transportation }}</p>
+          <i class="fa fa-building"></i>          
+          <h4 id="accommodation">Accommodation:</h4><p>{{ accommodation }}</p>
+          <i class="fa fa-language"></i>          
+          <h4 id="thankyou">Thank you:</h4><p>{{ thankyou }}</p>
+          <h4 id="goodbye">Goodbye:</h4><p>{{ goodbye }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="footer">
+    <a href="#body">
+      <div id="calculator">
+        <h4>CALCULATOR</h4>
+      </div>
+    </a>
+  </div>
+  <div id="calculatorApp"></div>
+  
+	<script src="js/app.js"></script>
+	<script src="js/controllers/tipCtrl.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/calc.js"></script>
+</body>
+</html>
