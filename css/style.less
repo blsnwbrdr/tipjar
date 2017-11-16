@@ -4,17 +4,14 @@
 @solidColor: white;
 @solidColorAlt: black;
 @overlayColor: rgba(62,41,22,0.75);
-//@overlayColor2: rgba(237,221,206,0.75);
 @primaryColor: #494F56;
 @secondaryColor: #B57A42;
 @secondaryColorLight: #CC9F74;
 @tertiaryColor: #42B550;
 @primaryGradient: linear-gradient(45deg,#42B550,#2D7B36);
 @secondaryGradient: radial-gradient(#515A60,#3E4348);
-//@secondaryGradient: radial-gradient(#666E77,#494F56);
 @transition: all 0.3s ease-out;
 
-//@import url('https://fonts.googleapis.com/css?family=Merienda+One|Hind:300,400,500,600');
 @import url('https://fonts.googleapis.com/css?family=Patrick+Hand|Nothing+You+Could+Do|Hind:300,400,500,600');
 
 
@@ -142,6 +139,7 @@ a:visited{
 #dining,
 #transportation,
 #accommodation,
+#currency,
 #thankyou,
 #goodbye{
   position: relative;
@@ -150,6 +148,7 @@ a:visited{
 #dining:before,
 #transportation:before,
 #accommodation:before,
+#currency:before,
 #thankyou:before,
 #goodbye:before{
   content: '';
@@ -161,7 +160,7 @@ a:visited{
   height: 1px;  
   border-bottom: 2px solid @secondaryColor;
 }
-#dining{
+#dining,#currency{
   width: 100px;
 }
 #transportation,
@@ -491,9 +490,10 @@ h3.primaryColor{
     padding: 5px 25px;
   }
   .country:hover{
+    border-left: none;
     padding-left: 20px;
+    color: @primaryColor;
   }
-
   #footer:hover{
     background-color: @secondaryColor;
   }

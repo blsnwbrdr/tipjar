@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   font: normal 400 16px 'Hind', sans-serif;
-  color: #494f56;
+  color: #494F56;
 }
 button {
   font: normal 400 16px 'Hind', sans-serif;
@@ -24,14 +24,14 @@ h1 {
   font-size: 60px;
   line-height: 50px;
   letter-spacing: 2px;
-  color: #cc9f74;
+  color: #CC9F74;
   margin: 0 0 15px;
   font-family: 'Patrick Hand', sans-serif;
 }
 h2 {
   font-size: 30px;
   font-family: 'Patrick Hand', sans-serif;
-  color: #b57a42;
+  color: #B57A42;
 }
 h3 {
   font-size: 16px;
@@ -100,7 +100,7 @@ a:visited {
   transition: all 0.3s ease-out;
 }
 #listBtn:hover {
-  background-color: #cc9f74;
+  background-color: #CC9F74;
   color: white;
   padding: 5px 35px;
   cursor: pointer;
@@ -124,6 +124,7 @@ a:visited {
 #dining,
 #transportation,
 #accommodation,
+#currency,
 #thankyou,
 #goodbye {
   position: relative;
@@ -132,6 +133,7 @@ a:visited {
 #dining:before,
 #transportation:before,
 #accommodation:before,
+#currency:before,
 #thankyou:before,
 #goodbye:before {
   content: '';
@@ -141,9 +143,10 @@ a:visited {
   transform: translate(-50%, 0);
   width: 50%;
   height: 1px;
-  border-bottom: 2px solid #b57a42;
+  border-bottom: 2px solid #B57A42;
 }
-#dining {
+#dining,
+#currency {
   width: 100px;
 }
 #transportation,
@@ -166,8 +169,8 @@ a:visited {
   transition: all 0.3s ease-out;
 }
 .country:hover {
-  border-left-color: #b57a42;
-  color: #b57a42;
+  border-left-color: #B57A42;
+  color: #B57A42;
   padding-left: 30px;
   cursor: pointer;
   transition: all 0.3s ease-out;
@@ -183,7 +186,7 @@ a:visited {
   width: 100%;
   height: 50px;
   z-index: 500;
-  background-color: #b57a42;
+  background-color: #B57A42;
   box-shadow: 0 0 5px 2px rgba(214, 214, 214, 0.75);
   text-align: center;
   transition: all 0.3s ease-out;
@@ -195,7 +198,7 @@ a:visited {
   color: white;
 }
 #footer:hover {
-  background-color: #494f56;
+  background-color: #494F56;
   cursor: pointer;
   transition: all 0.3s ease-out;
 }
@@ -207,25 +210,25 @@ a:visited {
   padding: 25px 0 0 0;
 }
 .secondaryColor {
-  color: #b57a42;
+  color: #B57A42;
 }
 .primaryColor {
-  color: #494f56;
+  color: #494F56;
 }
 h3.primaryColor {
-  border-left: 2px solid #494f56;
-  border-right: 2px solid #494f56;
+  border-left: 2px solid #494F56;
+  border-right: 2px solid #494F56;
 }
 #globe.primaryColor {
   color: rgba(73, 79, 86, 0.15);
 }
 #listBtn.primaryColor {
-  color: #494f56;
-  border-color: #494f56;
+  color: #494F56;
+  border-color: #494F56;
 }
 #listBtn.primaryColor:hover {
   color: white;
-  background-color: #494f56;
+  background-color: #494F56;
 }
 .fadeIn {
   -webkit-animation-name: fadeIn;
@@ -344,7 +347,7 @@ h3.primaryColor {
   left: 50%;
   top: 0;
   transform: translate(-50%, 0);
-  background: radial-gradient(#515a60, #3e4348);
+  background: radial-gradient(#515A60, #3E4348);
   width: 100%;
   max-width: 450px;
   min-height: 100%;
@@ -375,17 +378,17 @@ h3.primaryColor {
 #calculatorMain .digit:hover,
 #calculatorMain #closeCalcApp,
 #calculatorMain #clear {
-  background: linear-gradient(45deg, #42b550, #2d7b36);
+  background: linear-gradient(45deg, #42B550, #2D7B36);
 }
 #calculatorMain .percent:hover,
 #calculatorMain #closeCalcApp:hover,
 #calculatorMain #clear:hover {
-  background: #42b550;
+  background: #42B550;
 }
 #calculatorMain .percent {
   border-radius: 5px;
   border: none;
-  background: linear-gradient(45deg, #42b550, #2d7b36);
+  background: linear-gradient(45deg, #42B550, #2D7B36);
   width: 25%;
   height: 50px;
   margin: 5px;
@@ -440,15 +443,17 @@ h3.primaryColor {
   #calculatorMain .percent:hover,
   #calculatorMain #closeCalcApp:hover,
   #calculatorMain #clear:hover {
-    background: linear-gradient(45deg, #42b550, #2d7b36);
+    background: linear-gradient(45deg, #42B550, #2D7B36);
   }
   #listBtn:hover {
     padding: 5px 25px;
   }
   .country:hover {
+    border-left: none;
     padding-left: 20px;
+    color: #494F56;
   }
   #footer:hover {
-    background-color: #b57a42;
+    background-color: #B57A42;
   }
 }
