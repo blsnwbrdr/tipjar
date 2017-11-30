@@ -201,19 +201,19 @@
     "country": "Cambodia",
     "dining": "5% to 10% is appreciated, but not expected.",
     "transportation": "Taxis - a tip is not expected.",
-    "accommodation": "Porters and housekeeping - a tip is not expected, but a few thousand KHL per bag or per night is appreciated.",
+    "accommodation": "Porters and housekeeping - a tip is not expected, but a few thousand KHR per bag or per night is appreciated.",
     "thankyou": "Arkoun",
     "goodbye": "Lea",
-    "currency": "KHL"
+    "currency": "KHR"
   },
   {
     "country": "China",
     "dining": "Tipping is not customary and often refused.",
     "transportation": "Taxis - no tip is expected.",
-    "accommodation": "Porters - 5 RMB in western tourist hotels.",
+    "accommodation": "Porters - 5 CNY in western tourist hotels.",
     "thankyou": "Xiexie",
     "goodbye": "Zaijian",
-    "currency": "RMB"
+    "currency": "CNY"
   },
   {
     "country": "India",
