@@ -21,6 +21,7 @@
     <h3 id="h3">A globetrotting guide to gratuity</h3>
     <i id="globe" class="fa fa-globe"></i>
     <button id="listBtn">Choose a location</button>
+		<a id="appStoreLogo" href="https://itunes.apple.com/us/app/tip-jar-guide-to-gratuity/id1321633520?ls=1&mt=8" target="_blank"><img src="img/appStore.svg"></a>
   </div>
 
   <div id="main">
@@ -42,10 +43,11 @@
           <i class="fa fa-building"></i>
           <h4 id="accommodation">Accommodation:</h4><p>{{ accommodation }}</p>
 					<i class="fa fa-money"></i>
-					<h4 id="currency">Currency:</h4><p>1 USD = {{ conversion }} {{ currency }}</p>
+					<h4 id="currency">Currency*:</h4><p>1 USD = {{ conversion }} {{ currency }}</p>
           <i class="fa fa-language"></i>
           <h4 id="thankyou">Thank you:</h4><p>{{ thankyou }}</p>
           <h4 id="goodbye">Goodbye:</h4><p>{{ goodbye }}</p>
+					<p class="disclaimer">* Exchange rates are historical and periodically updated. Currency data is not live.</p>
         </div>
       </div>
     </div>

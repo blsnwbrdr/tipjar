@@ -9,6 +9,8 @@ function showCountryList() {
   document.getElementById('h3').className = 'primaryColor';
   document.getElementById('globe').className += ' primaryColor';
   document.getElementById('listBtn').className = 'primaryColor';
+  document.getElementById('listBtn').style.display = 'none';
+  document.getElementById('appStoreLogo').style.display = 'inline-block';
   document.getElementById('footer').style.display = 'block';
 }
 document.getElementById('listBtn').addEventListener('click', showCountryList);

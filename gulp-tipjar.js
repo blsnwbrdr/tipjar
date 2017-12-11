@@ -9,41 +9,38 @@ var rename = require('gulp-rename');
 var img = require('gulp-imagemin');
 var jsonMinify = require('gulp-jsonminify');
 
-// LOCATION VARIABLES
-var tipjar = '';
-
 //----------
 // TASKS
 //----------
 
 // PARSE HTML, MINIFY, AND COPY TO NEW LOCATION
 gulp.task('html', function() {
-  return gulp.src(tipjar + '/index-staging.html')
+  return gulp.src('index-staging.html')
     .pipe(useref())
     .pipe(gulpif(['js/*.js','js/**/*.js'], jsMinify()))
     .pipe(gulpif('css/*.css', cssMinify()))
     .pipe(gulpif('index-staging.html', rename('index.html')))
-    .pipe(gulp.dest(tipjar));
+    .pipe(gulp.dest(''));
 });
 
 // MINIFY JSON FILES
 gulp.task('json', function() {
-  return gulp.src([tipjar + 'data/*.json','!' + tipjar + 'data/*-min.json'])
+  return gulp.src(['data/*.json','!data/*-min.json'])
     .pipe(jsonMinify())
     .pipe(rename({ extname: '-min.json' }))
-    .pipe(gulp.dest(tipjar + 'data/'));
+    .pipe(gulp.dest('data/'));
 });
 
 // COMPRESS IMAGES
 gulp.task('images', function() {
-  return gulp.src([tipjar + 'img/*.png',tipjar + 'img/*.jpg'])
+  return gulp.src(['img/*.png','img/*.jpg'])
     .pipe(img())
-    .pipe(gulp.dest(tipjar + 'img/'));
+    .pipe(gulp.dest('img/'));
 });
 
 // COPY CURRENCYDATA.JSON TO CURRENCY DIR
 gulp.task('moveJson', function() {
-  return gulp.src(tipjar + 'data/currencyData.json')
+  return gulp.src('data/currencyData.json')
     .pipe(rename({ extname: '-archive.json'}))
     .pipe(gulp.dest('currency-conversion/'))
 })
