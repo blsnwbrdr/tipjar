@@ -3,6 +3,7 @@ app.controller('tipDataCtrl', ['$scope', '$http', function($scope, $http) {
   $http.get('data/countryTipData-min.json').then(function(response) {
     // WRITE COUNTRY LIST
     var countryName = [];
+    // console.log(response.data.length);
     for(var i = 0; i < response.data.length; i++) {
       countryName.push(response.data[i].country);
     }
