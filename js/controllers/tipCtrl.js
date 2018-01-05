@@ -29,7 +29,7 @@ app.controller('tipDataCtrl', ['$scope', '$http', function($scope, $http) {
           $http.get('data/currencyData-min.json').then(function(response) {
             for(var i = 0; i < response.data.length; i++) {
               if(currency === response.data[i].currency) {
-                $scope.conversion = response.data[i].conversion;
+                $scope.conversion = Math.round(response.data[i].conversion * 100) / 100;
               }
             }
           })
