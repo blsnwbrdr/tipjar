@@ -38,7 +38,7 @@ gulp.task('images', function() {
     .pipe(gulp.dest('img/'));
 });
 
-// COPY CURRENCYDATA.JSON TO CURRENCY DIR
+// ARCHIVE CURRENCYDATA TO CURRENCY-CONVERSION DIR
 gulp.task('moveJson', function() {
   return gulp.src('data/currencyData.json')
     .pipe(rename({ extname: '-archive.json'}))
